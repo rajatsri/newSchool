@@ -17,6 +17,8 @@ import com.vaadin.ui.VerticalLayout;
  *
  */
 @Theme("mytheme")
+//comment
+
 @Widgetset("com.logicbomb.newschool.MyAppWidgetset")
 public class MyUI extends UI {
 
