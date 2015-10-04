@@ -44,13 +44,6 @@ public class HomePage extends HorizontalLayout{
         //Adding widgets to the frames
         UserDetailsWidget u= new UserDetailsWidget();
         frameA1.addComponent(u);
-        
-        //Making a change
-        
-        //deleting previous changes
-        
-        
-
         Button button = new Button("Click Me");
         button.setWidth("100px");
         button.addClickListener(new Button.ClickListener() {
