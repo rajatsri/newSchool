@@ -32,12 +32,11 @@ import javax.servlet.annotation.WebServlet;
  */
 @Theme("mytheme")
 @Widgetset("com.logicbomb.newschool.MyAppWidgetset")
-public class UserDetailsWidget extends VerticalLayout{
+public class UserDetailsWidget extends VerticalLayout {
 
     public UserDetailsWidget() {
-        
+
         setMargin(true);
-        
 
         // Image as a file resource
         FileResource resource = new FileResource(new File("C:/Users/Rajat/Desktop/DSC_0154_2.jpg"));
@@ -46,13 +45,11 @@ public class UserDetailsWidget extends VerticalLayout{
         Image image = new Image("", resource);
         image.setWidth("120px");
         addComponent(image);
-        
-        
-         //Let the user view the file in browser or download it
+
+        //Let the user view the file in browser or download it
         Link iLink = new Link("Rajat Srivastava", resource);
         addComponent(iLink);
-        
-        
+
         Button button = new Button("Log Out");
         button.addClickListener(new Button.ClickListener() {
             @Override
