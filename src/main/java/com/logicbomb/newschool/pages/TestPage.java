@@ -1,6 +1,6 @@
 package com.logicbomb.newschool.pages;
 
-import com.logicbomb.newschool.widgets.DayAtAGlanceWidget;
+import com.logicbomb.newschool.widgets.core.DayWidget;
 import com.logicbomb.newschool.widgets.LoginWidget;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
@@ -24,11 +24,11 @@ public class TestPage extends AbsoluteLayout {
         setWidth("100%");
         setHeight("800px");
         
-        DayAtAGlanceWidget iDayAtAGlanceWidget = new DayAtAGlanceWidget();
+        DayWidget iDayAtAGlanceWidget = new DayWidget();
 
         ComponentPosition iComponentPosition = new ComponentPosition();
-        iComponentPosition.setLeft((float) 10, Unit.PERCENTAGE);
-        iComponentPosition.setBottom((float) 10, Unit.PERCENTAGE);
+        iComponentPosition.setLeft((float) 20, Unit.PERCENTAGE);
+        iComponentPosition.setTop((float) 10, Unit.PERCENTAGE);
 
         addComponent(iDayAtAGlanceWidget);
         setPosition(iDayAtAGlanceWidget, iComponentPosition);

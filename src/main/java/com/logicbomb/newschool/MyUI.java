@@ -27,13 +27,13 @@ public class MyUI extends UI {
 
         setContent(iVerticalLayout);
         
-       // TestPage iTestPage = new TestPage();
-       //iVerticalLayout.addComponent(iTestPage);
+        TestPage iTestPage = new TestPage();
+       iVerticalLayout.addComponent(iTestPage);
         
        // HomePage listPage = new HomePage();
        // iVerticalLayout.addComponent(listPage);
-       LoginPage iLoginPage = new LoginPage();
-       iVerticalLayout.addComponent(iLoginPage);
+       //LoginPage iLoginPage = new LoginPage();
+       //iVerticalLayout.addComponent(iLoginPage);
 
     }
 

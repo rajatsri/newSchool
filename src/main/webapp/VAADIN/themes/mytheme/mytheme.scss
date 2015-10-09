@@ -30,16 +30,68 @@
 @import "../valo/valo.scss";
 
 @mixin mytheme {
-  @include valo;
+    @include valo;
 
-  // Insert your own theme rules here
-  .backColorGrey{
-           background-color:#ACACAC;
-      }
-  .backColorWhite{
-           background-color:#FFFFFF;
-      }
-  .body{
-           background-image: url("img/loginPage.jpg")
-      }
+    // Insert your own theme rules here
+    .backColorGrey{
+        background-color:#ACACAC;
+    }
+    .backColorWhite{
+        background-color:#FFFFFF;
+    }
+    .body{
+        background-image: url("img/loginPage.jpg")
+    }
+
+    .v-button-type1-red {
+        text-align: left;
+        vertical-align:text-bottom;
+        padding-left: 8px;
+        padding-top: 15px;
+        font-size: 12px;
+        //border-color: red;
+        border-bottom-color: red;
+        border-bottom-width: 2px;
+        //border-right: none;
+    }
+    .v-button-type1-green {
+        text-align: left;
+        vertical-align:text-bottom;
+        padding-left: 8px;
+        padding-top: 15px;
+        font-size: 12px;
+              border-bottom-color: green;
+        border-bottom-width: 2px;
+    }
+
+
+    .v-button-type1 {
+        text-align: left;
+        vertical-align:text-bottom;
+        padding-left: 8px;
+        padding-top: 18px;
+        font-size: 12px;
+        border-color: red;
+    }
+    .v-button-type2 {
+        //color: #fff;
+        //background-color: red;
+        font-weight: bold;
+        font-size: 12px;
+        background: transparent;
+        text-align: left;
+        //text-spacing: none;
+        padding-left: 3px;
+        padding-bottom: 13px;
+        border: none;
+    }
+
+
+    .v-label-type1 {
+        text-align: left;
+        padding-left: 8px;
+        padding-top: -2px;
+        font-size: 13px;
+        
+    }
 }
