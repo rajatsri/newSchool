@@ -42,6 +42,7 @@ public class LoginWidget extends VerticalLayout {
         iTextField.setIcon(FontAwesome.USER);
         iTextField.addValidator(new EmailValidator("Username must be an email address"));
         iTextField.setInvalidAllowed(true);
+        iTextField.focus();
              
         PasswordField iPasswordField = new PasswordField("Password");
         iPasswordField.setIcon(FontAwesome.KEY);
@@ -66,6 +67,8 @@ public class LoginWidget extends VerticalLayout {
         iFormLayout.addComponent(iPasswordField);
         iFormLayout.addComponent(iButton);
         iPanel.setContent(iFormLayout);
+        
+        
 
     }
 }
