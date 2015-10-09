@@ -30,16 +30,19 @@
 @import "../valo/valo.scss";
 
 @mixin mytheme {
-  @include valo;
+    @include valo;
 
-  // Insert your own theme rules here
-  .backColorGrey{
-           background-color:#ACACAC;
-      }
-  .backColorWhite{
-           background-color:#FFFFFF;
-      }
-  .body{
-           background-image: url("img/loginPage.jpg")
-      }
+    // Insert your own theme rules here
+    .backColorGrey{
+        background-color:#ACACAC;
+    }
+    .backColorWhite{
+        background-color:#FFFFFF;
+    }
+    .backColorGrey2{
+        background-color:#ACACFF;
+    }      
+    .body{
+        background-image: url("img/loginPage.jpg")
+    }
 }

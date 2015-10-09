@@ -84,6 +84,12 @@
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-themes</artifactId>
 		</dependency>
+	 <dependency>
+	  <groupId>org.seleniumhq.selenium</groupId>
+	  <artifactId>jetty-rc-repacked</artifactId>
+	  <version>5</version>
+	  <type>jar</type>
+	 </dependency>
 	</dependencies>
 
 	<build>
