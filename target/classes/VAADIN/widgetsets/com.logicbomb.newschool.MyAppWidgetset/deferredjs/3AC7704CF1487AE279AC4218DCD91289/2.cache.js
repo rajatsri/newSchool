@@ -1,0 +1,1 @@
+$wnd.com_logicbomb_newschool_MyAppWidgetset.runAsyncCallback2('Ybb(1557,1,pVd);_.tc=function dcc(){PZb((!IZb&&(IZb=new UZb),IZb),this.a.d)};ROd(Th)(2);\n//# sourceURL=com.logicbomb.newschool.MyAppWidgetset-2.js\n')
