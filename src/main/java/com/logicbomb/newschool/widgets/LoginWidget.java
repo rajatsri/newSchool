@@ -22,17 +22,13 @@ import com.vaadin.ui.VerticalLayout;
 public class LoginWidget extends VerticalLayout {
 
     public LoginWidget() {
-        //Setting Vertical Layout Margin
         setMargin(true);
-        //Setting Vertical Layout Spacing between components
         setSpacing(true);
 
-        //Creating Panel
         Panel iPanel = new Panel();
         iPanel.addStyleName("backColorWhite");
         iPanel.setSizeUndefined();
 
-        //Adding Panel to Vertical Layout
         addComponent(iPanel);
 
         TextField iTextField = new TextField("Username");
@@ -43,15 +39,14 @@ public class LoginWidget extends VerticalLayout {
         iTextField.addValidator(new EmailValidator("Username must be an email address"));
         iTextField.setInvalidAllowed(true);
         iTextField.focus();
-             
+
         PasswordField iPasswordField = new PasswordField("Password");
         iPasswordField.setIcon(FontAwesome.KEY);
         iPasswordField.setWidth("300px");
         iPasswordField.setRequired(true);
         iPasswordField.setValue("");
         iPasswordField.setNullRepresentation("");
-        
-        
+
         Button iButton = new Button("Login");
         iButton.addClickListener(new Button.ClickListener() {
             @Override
@@ -67,8 +62,6 @@ public class LoginWidget extends VerticalLayout {
         iFormLayout.addComponent(iPasswordField);
         iFormLayout.addComponent(iButton);
         iPanel.setContent(iFormLayout);
-        
-        
 
     }
 }

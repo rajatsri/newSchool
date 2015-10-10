@@ -38,8 +38,12 @@ public class UserDetailsWidget extends VerticalLayout {
 
     public UserDetailsWidget() {
 
-        setMargin(true);
-        
+        setSpacing(true);
+        Panel iPanel = new Panel();
+        iPanel.setWidth("50px");
+        iPanel.setHeight("50px");
+        iPanel.setStyleName("backColorWhite");
+        addComponent(iPanel);               
         String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
 
         // Image as a file resource
@@ -47,22 +51,8 @@ public class UserDetailsWidget extends VerticalLayout {
 
         // Show the image in the application
         Image image = new Image("", resource);
-        image.setWidth("120px");
-        addComponent(image);
-
-
-        //Let the user view the file in browser or download it
-        Link iLink = new Link("Rajat Srivastava", resource);
-        addComponent(iLink);
-
-        Button button = new Button("Log Out");
-        button.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent event) {
-                addComponent(new Label("Thank you for clicking"));
-            }
-        });
-        addComponent(button);
+        image.setSizeFull();
+        iPanel.setContent(image);
 
     }
 }

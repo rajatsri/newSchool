@@ -1,6 +1,6 @@
 package com.logicbomb.newschool;
 
-import com.logicbomb.newschool.pages.HomePage;
+import com.logicbomb.newschool.pages.MasterPage;
 import com.logicbomb.newschool.pages.LoginPage;
 import com.logicbomb.newschool.pages.TestPage;
 import javax.servlet.annotation.WebServlet;
@@ -31,10 +31,10 @@ public class MyUI extends UI {
 
        // TestPage iTestPage = new TestPage();
         //iVerticalLayout.addComponent(iTestPage);
-       //HomePage listPage = new HomePage();
-        // iVerticalLayout.addComponent(listPage);
-        LoginPage iLoginPage = new LoginPage();
-        iVerticalLayout.addComponent(iLoginPage);
+       MasterPage listPage = new MasterPage();
+         iVerticalLayout.addComponent(listPage);
+     //   LoginPage iLoginPage = new LoginPage();
+      //  iVerticalLayout.addComponent(iLoginPage);
 
 
     }
