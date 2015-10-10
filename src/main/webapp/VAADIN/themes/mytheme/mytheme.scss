@@ -36,11 +36,33 @@
     .backColorGrey{
         background-color:#ACACAC;
     }
+    .backColorGrey2{
+        background-color:#ACACBC;
+    }
     .backColorWhite{
         background-color:#FFFFFF;
     }
+    .backColorBlack{
+        background-color:#000000;
+        border: none;
+    }
     .body{
         background-image: url("img/loginPage.jpg")
+    }
+    
+    .v-label-big {
+        text-align: center;
+        font-size: 16px;
+        color: White;
+        font-weight: bold;
+
+    }
+    
+    .v-label-small {
+        text-align: center;
+        font-size: 12px;
+        color: White;
+
     }
 
     .v-button-type1-red {
@@ -60,7 +82,7 @@
         padding-left: 8px;
         padding-top: 15px;
         font-size: 12px;
-              border-bottom-color: green;
+        border-bottom-color: green;
         border-bottom-width: 2px;
     }
 
@@ -92,6 +114,6 @@
         padding-left: 8px;
         padding-top: -2px;
         font-size: 13px;
-        
+
     }
 }
