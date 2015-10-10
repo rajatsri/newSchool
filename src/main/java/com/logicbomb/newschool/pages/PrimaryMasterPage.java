@@ -5,7 +5,7 @@
  */
 package com.logicbomb.newschool.pages;
 
-import com.logicbomb.newschool.widgets.core.ContextWidget;
+import com.logicbomb.newschool.MyAppWidgetSet.core.ContextWidget;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.FontAwesome;
@@ -18,6 +18,8 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
+import org.vaadin.sliderpanel.SliderPanelStyles;
+import org.vaadin.sliderpanel.client.SliderMode;
 
 /**
  *
@@ -72,26 +74,31 @@ public class PrimaryMasterPage extends HorizontalLayout {
         iHorizontalLayout.setExpandRatio(B, 6);
 
         //Layout B1 and its sub Components
-        HorizontalLayout B1 = new HorizontalLayout();
-        B1.setSizeFull();
+        ContextWidget B1= new ContextWidget();
         B.addComponent(B1);
         B.setExpandRatio(B1, 1);
-        B1.setStyleName("backColorBlack");
+        B1.setSizeFull();
+        //B1=ContextWidget.ContextWidgetTransformer(B1, new SliderMasterPage(),SliderMode.RIGHT,SliderPanelStyles.COLOR_RED);
+                
+        HorizontalLayout B11 = new HorizontalLayout();
+        B1.addComponent(B11);
+        B11.setSizeFull();
+        B11.setStyleName("backColorBlack");
         //B1.setMargin(new MarginInfo(false, true, false, true));
 
         TextField iTextField = new TextField();
         iTextField.setWidth("200px");
         iTextField.setInputPrompt("Search!");
         iTextField.focus();
-        B1.addComponent(iTextField);
-        B1.setComponentAlignment(iTextField, Alignment.MIDDLE_LEFT);
+        B11.addComponent(iTextField);
+        B11.setComponentAlignment(iTextField, Alignment.MIDDLE_LEFT);
         
         Button userPhoto = new Button();
         userPhoto.setIcon(FontAwesome.USER);
         userPhoto.setHeight("55px");
         userPhoto.setWidth("55px");
-        B1.addComponent(userPhoto);
-        B1.setComponentAlignment(userPhoto, Alignment.MIDDLE_RIGHT);
+        B11.addComponent(userPhoto);
+        B11.setComponentAlignment(userPhoto, Alignment.MIDDLE_RIGHT);
         
 
 
@@ -100,7 +107,8 @@ public class PrimaryMasterPage extends HorizontalLayout {
         B2.setSizeFull();
         B.addComponent(B2);
         B.setExpandRatio(B2, 8);
-        B2=ContextWidget.ContextWidgetTransformer(B2, new SliderMasterPage());
+        B2=ContextWidget.ContextWidgetTransformer(B2, new SliderMasterPage(),SliderMode.RIGHT,SliderPanelStyles.COLOR_BLUE);
+        //B2=ContextWidget.ContextWidgetTransformer(B2, new SliderMasterPage(),SliderMode.TOP,SliderPanelStyles.COLOR_RED);
         VerticalLayout v= new VerticalLayout();
         B2.addComponent(v);
         
@@ -126,6 +134,9 @@ public class PrimaryMasterPage extends HorizontalLayout {
         //B2.addComponent(iContextPanel);
        //setPosition(p, iComponentPositionPanel);
 
+        
+         
+        
         
         addComponent(iHorizontalLayout);
     }

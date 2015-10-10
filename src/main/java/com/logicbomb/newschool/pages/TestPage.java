@@ -1,6 +1,6 @@
 package com.logicbomb.newschool.pages;
 
-import com.logicbomb.newschool.widgets.core.DayWidget;
+import com.logicbomb.newschool.MyAppWidgetSet.core.DayWidget;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.ui.AbsoluteLayout;

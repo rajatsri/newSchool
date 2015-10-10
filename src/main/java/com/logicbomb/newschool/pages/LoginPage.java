@@ -1,6 +1,6 @@
 package com.logicbomb.newschool.pages;
 
-import com.logicbomb.newschool.widgets.LoginWidget;
+import com.logicbomb.newschool.MyAppWidgetSet.LoginWidget;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.Page;

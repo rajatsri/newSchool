@@ -7,7 +7,7 @@
 
 // Defines the border used by all components.
 //$v-border: 1px solid (v-shade 0.7);
-//$v-border-radius: 4px;
+$v-border-radius: 2px;
 
 // Affects the color of some component elements, e.g Button, Panel title, etc
 //$v-background-color: hsl(210, 0%, 98%);
@@ -16,7 +16,7 @@
 
 // Affects the visual appearance of all components
 //$v-gradient: v-linear 8%;
-//$v-bevel-depth: 30%;
+$v-bevel-depth: 0%;
 //$v-shadow-opacity: 5%;
 
 // Defines colors for indicating status (focus, success, failure)
@@ -43,13 +43,14 @@
         background-color:#FFFFFF;
     }
     .backColorBlack{
-        background-color:#000000;
+        background-color:#004C4C;
         border: none;
+        z-index: 5;
     }
     .body{
         background-image: url("img/loginPage.jpg")
     }
-    
+
     .v-label-big {
         text-align: center;
         font-size: 16px;
@@ -57,7 +58,7 @@
         font-weight: bold;
 
     }
-    
+
     .v-label-small {
         text-align: center;
         font-size: 12px;
@@ -116,4 +117,11 @@
         font-size: 13px;
 
     }
+
+    .v-sliderpanel-wrapper .v-sliderpanel-content, .v-sliderpanel-wrapper .v-sliderpanel-tab  {
+        background: #669494;
+        color: #FFF;
+        
+    }
+
 }
