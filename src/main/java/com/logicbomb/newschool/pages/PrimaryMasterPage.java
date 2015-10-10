@@ -31,6 +31,7 @@ public class PrimaryMasterPage extends HorizontalLayout {
         HorizontalLayout iHorizontalLayout = new HorizontalLayout();
         iHorizontalLayout.setWidth(String.valueOf(Page.getCurrent().getBrowserWindowWidth()));
         iHorizontalLayout.setHeight(String.valueOf(Page.getCurrent().getBrowserWindowHeight()));
+        iHorizontalLayout.setStyleName("backColorBlack");
 
         String[] captions1 = {"Logo Here", "My Cool School", "Third"};
 

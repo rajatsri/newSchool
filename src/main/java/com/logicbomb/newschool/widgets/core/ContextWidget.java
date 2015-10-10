@@ -27,7 +27,7 @@ public class ContextWidget extends AbsoluteLayout {
 
     public static ContextWidget ContextWidgetTransformer(ContextWidget aAbsoluteLayout,SliderMasterPage aSliderPanelContents) {
         aAbsoluteLayout.addStyleName("backColorWhite");
-        aAbsoluteLayout.setSizeFull();
+        //aAbsoluteLayout.setSizeFull();
         SliderPanel p = getSliderWidget(aSliderPanelContents);
         AbsoluteLayout.ComponentPosition iComponentPositionPanel = aAbsoluteLayout.new ComponentPosition();
         iComponentPositionPanel.setLeft((float) 97, Unit.PERCENTAGE);
