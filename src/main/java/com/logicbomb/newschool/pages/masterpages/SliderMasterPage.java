@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.logicbomb.newschool.pages;
+package com.logicbomb.newschool.pages.masterpages;
 
 import com.vaadin.shared.ui.MarginInfo;
 import com.vaadin.ui.TextField;

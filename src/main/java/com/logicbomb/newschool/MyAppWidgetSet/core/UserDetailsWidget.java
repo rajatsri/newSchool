@@ -5,7 +5,7 @@
  */
 package com.logicbomb.newschool.MyAppWidgetSet.core;
 
-import com.logicbomb.newschool.pages.SliderMasterPage;
+import com.logicbomb.newschool.pages.masterpages.SliderMasterPage;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;

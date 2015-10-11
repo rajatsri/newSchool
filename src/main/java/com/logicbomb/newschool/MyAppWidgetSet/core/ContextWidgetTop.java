@@ -1,6 +1,6 @@
 package com.logicbomb.newschool.MyAppWidgetSet.core;
 
-import com.logicbomb.newschool.pages.SliderMasterPage;
+import com.logicbomb.newschool.pages.masterpages.SliderMasterPage;
 import com.logicbomb.newschool.MyAppWidgetSet.core.DayWidget;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;

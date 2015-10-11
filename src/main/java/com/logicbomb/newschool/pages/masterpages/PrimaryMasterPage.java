@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.logicbomb.newschool.pages;
+package com.logicbomb.newschool.pages.masterpages;
 
 import com.logicbomb.newschool.MyAppWidgetSet.core.UserDetailsWidget;
 import com.google.gwt.user.client.ui.ToggleButton;
 import com.logicbomb.newschool.MyAppWidgetSet.core.ContextWidget;
 import com.logicbomb.newschool.MyAppWidgetSet.core.ContextWidgetTop;
+import com.logicbomb.newschool.MyAppWidgetSet.core.MainMenuWidget;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.FontAwesome;
@@ -50,30 +51,40 @@ public class PrimaryMasterPage extends HorizontalLayout {
         iHorizontalLayout.addComponent(AP);
         AP.setSizeFull();
         AP.setStyleName("backColorBlack");
-        VerticalLayout A = new VerticalLayout();
-        AP.setContent(A);
+        VerticalLayout A1 = new VerticalLayout();
+        AP.setContent(A1);
         //A.setSizeFull();
-        A.setSpacing(true);
+        A1.setSpacing(true);
         iHorizontalLayout.setExpandRatio(AP, 1);
-        A.setStyleName("backColorBlack");
-        A.setMargin(new MarginInfo(true, true, true, true));
+        
+        
+        
+        
+        A1.setStyleName("backColorBlack");
+        A1.setMargin(new MarginInfo(true, true, true, true));
 
         Button logoImage = new Button();
         logoImage.setIcon(FontAwesome.PICTURE_O);
-        logoImage.setSizeFull();
-        logoImage.setHeight(logoImage.getWidth()+10,Unit.PIXELS);
+        logoImage.setWidth("80px");
+        logoImage.setHeight(logoImage.getWidth(),Unit.PIXELS);
         //logoImage.setWidth("100px");
-        A.addComponent(logoImage);
-        A.setComponentAlignment(logoImage,Alignment.TOP_CENTER);
+        A1.addComponent(logoImage);
+        A1.setComponentAlignment(logoImage,Alignment.TOP_CENTER);
         
         Label schoolName = new Label("The School Of Future");
         schoolName.setStyleName("v-label-big");
-        A.addComponent(schoolName);
+        A1.addComponent(schoolName);
         //A.setComponentAlignment(schoolName,Alignment.TOP_CENTER);
         
         Label schoolMinorName = new Label("Random Branch");
         schoolMinorName.setStyleName("v-label-small");
-        A.addComponent(schoolMinorName);
+        A1.addComponent(schoolMinorName);
+        
+        VerticalLayout A2 = new VerticalLayout();
+        A1.addComponent(A2);
+        MainMenuWidget iMainMenuWidget= new MainMenuWidget();
+        A2.addComponent(iMainMenuWidget);
+        
         //A.setComponentAlignment(schoolName,Alignment.TOP_CENTER);
 
         //Layout B
@@ -81,9 +92,10 @@ public class PrimaryMasterPage extends HorizontalLayout {
         c=ContextWidgetTop.ContextWidgetTransformer(c, new UserDetailsWidget(),SliderMode.TOP,SliderPanelStyles.COLOR_RED);
         VerticalLayout B = new VerticalLayout();
         B.setSizeFull();
+        //B.setSpacing(true);
         iHorizontalLayout.addComponent(c);
         c.addComponent(B);
-        iHorizontalLayout.setExpandRatio(c, 9);
+        iHorizontalLayout.setExpandRatio(c, 7);
 
         //Layout B1 and its sub Components
         HorizontalLayout B1= new HorizontalLayout();

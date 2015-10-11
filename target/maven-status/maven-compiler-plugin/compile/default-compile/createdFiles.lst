@@ -1,12 +1,5 @@
-com\logicbomb\newschool\widgets\core\DayWidget.class
-com\logicbomb\newschool\widgets\LoginWidget.class
-com\logicbomb\newschool\widgets\UserDetailsWidget.class
 com\logicbomb\newschool\MyUI.class
-com\logicbomb\newschool\pages\LoginPage.class
-com\logicbomb\newschool\widgets\core\HourWidget.class
-com\logicbomb\newschool\pages\HomePage$1.class
 com\logicbomb\newschool\pages\DetailPage.class
-com\logicbomb\newschool\pages\HomePage.class
+com\logicbomb\newschool\pages\LoginPage.class
 com\logicbomb\newschool\pages\TestPage.class
 com\logicbomb\newschool\MyUI$MyUIServlet.class
-com\logicbomb\newschool\widgets\UserDetailsWidget$1.class

@@ -6,21 +6,24 @@ $v-font-size: 12px;
 //$v-font-family: "Trebuchet", ;
 
 // Defines the border used by all components.
-//$v-border: 1px solid (v-shade 0.7);
+$v-border: 0px solid (v-shade 0.7);
 $v-border-radius: 2px;
 
 // Affects the color of some component elements, e.g Button, Panel title, etc
-//$v-background-color: hsl(210, 0%, 98%);
+$v-background-color:  #D9E5E5;//#004C4C;//hsl(210, 0%, 98%);
 // Affects the color of content areas, e.g  Panel and Window content, TextField input etc
-//$v-app-background-color: $v-background-color;
+$v-app-background-color: white;//$v-background-color;
+
+
+
 
 // Affects the visual appearance of all components
-$v-gradient: v-linear 2%;
+$v-gradient: v-linear 0%;
 $v-bevel-depth: 0%;
 //$v-shadow-opacity: 5%;
 
 // Defines colors for indicating status (focus, success, failure)
-//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-focus-color: green; //valo-focus-color(); // Calculates a suitable color automatically
 //$v-friendly-color: #2c9720;
 //$v-error-indicator-color: #ed473b;
 
@@ -31,6 +34,34 @@ $v-bevel-depth: 0%;
 
 @mixin mytheme {
     @include valo;
+    .v-button:hover{
+        background-image: none;
+        background-color: #009972;
+        border:none;
+    }
+
+
+
+    .v-button:after_custom > .v-button:after{
+        color :#FFF;
+        box-shadow: none;
+        border: none;
+    }
+
+    .v-accordion-item-caption > .v-caption 
+    {
+        background-color: #FFF;
+        color:FFF;
+        border: none !important;
+    }
+    .v-button:focus:after
+        {
+        border-color: #009972 !important;
+        box-shadow: none !important;
+    }
+
+
+
 
     // Insert your own theme rules here
     .backColorGrey{
@@ -109,13 +140,13 @@ $v-bevel-depth: 0%;
         padding-bottom: 13px;
         border: none;
     }
-    
+
     .v-button-type3 {
         text-align: left;
         vertical-align:text-bottom;
         padding-left: 18px;
         //padding-top: 18px;
-        font-size: 12px;
+        font-size: 10px;
         border: none;
     }
 
@@ -134,20 +165,23 @@ $v-bevel-depth: 0%;
         color: #FFF;
         opacity: 1;
         font-size: 12px;
-        
-    }
-    
-    //TextBoxes
-    .v-text-type-search {
-         background:  #D9E5E5;
-         border: none;
-         color: seagreen;
+        border-radius: 1px;
 
     }
-    
+
+    //TextBoxes
+    .v-text-type-search {
+        background:  #D9E5E5;
+        border: none;
+        color: seagreen;
+        //padding-left: 5px;
+        margin-left: 1px;
+
+    }
+
     //Layouts
     .v-layout-padding-left {
-         padding-left: 5px;
+        padding-left: 5px;
 
     }
 

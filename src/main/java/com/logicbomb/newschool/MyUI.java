@@ -1,6 +1,6 @@
 package com.logicbomb.newschool;
 
-import com.logicbomb.newschool.pages.PrimaryMasterPage;
+import com.logicbomb.newschool.pages.masterpages.PrimaryMasterPage;
 import com.logicbomb.newschool.pages.LoginPage;
 import com.logicbomb.newschool.pages.TestPage;
 import javax.servlet.annotation.WebServlet;
