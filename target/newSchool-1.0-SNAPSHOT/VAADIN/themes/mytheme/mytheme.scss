@@ -1,9 +1,9 @@
 // Global variable overrides. Must be declared before importing Valo.
 
 // Defines the plaintext font size, weight and family. Font size affects general component sizing.
-//$v-font-size: 16px;
+$v-font-size: 12px;
 //$v-font-weight: 300;
-//$v-font-family: "Open Sans", sans-serif;
+//$v-font-family: "Trebuchet", ;
 
 // Defines the border used by all components.
 //$v-border: 1px solid (v-shade 0.7);
@@ -15,7 +15,7 @@ $v-border-radius: 2px;
 //$v-app-background-color: $v-background-color;
 
 // Affects the visual appearance of all components
-//$v-gradient: v-linear 8%;
+$v-gradient: v-linear 2%;
 $v-bevel-depth: 0%;
 //$v-shadow-opacity: 5%;
 
@@ -53,7 +53,7 @@ $v-bevel-depth: 0%;
 
     .v-label-big {
         text-align: center;
-        font-size: 16px;
+        font-size: 13px;
         color: White;
         font-weight: bold;
 
@@ -61,7 +61,7 @@ $v-bevel-depth: 0%;
 
     .v-label-small {
         text-align: center;
-        font-size: 12px;
+        font-size: 11px;
         color: White;
 
     }
@@ -88,6 +88,7 @@ $v-bevel-depth: 0%;
     }
 
 
+    //Buttons
     .v-button-type1 {
         text-align: left;
         vertical-align:text-bottom;
@@ -108,8 +109,17 @@ $v-bevel-depth: 0%;
         padding-bottom: 13px;
         border: none;
     }
+    
+    .v-button-type3 {
+        text-align: left;
+        vertical-align:text-bottom;
+        padding-left: 18px;
+        //padding-top: 18px;
+        font-size: 12px;
+        border: none;
+    }
 
-
+    //Labels
     .v-label-type1 {
         text-align: left;
         padding-left: 8px;
@@ -118,10 +128,27 @@ $v-bevel-depth: 0%;
 
     }
 
+    //SliderPanels
     .v-sliderpanel-wrapper .v-sliderpanel-content, .v-sliderpanel-wrapper .v-sliderpanel-tab  {
-        background: #669494;
+        background:  #669494;
         color: #FFF;
+        opacity: 1;
+        font-size: 12px;
         
+    }
+    
+    //TextBoxes
+    .v-text-type-search {
+         background:  #D9E5E5;
+         border: none;
+         color: seagreen;
+
+    }
+    
+    //Layouts
+    .v-layout-padding-left {
+         padding-left: 5px;
+
     }
 
 }

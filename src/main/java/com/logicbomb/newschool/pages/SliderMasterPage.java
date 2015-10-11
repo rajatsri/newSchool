@@ -19,10 +19,8 @@ public class SliderMasterPage extends VerticalLayout {
     public SliderMasterPage() {
         
         //Dont use this class, extend it instead.
-        setMargin(new MarginInfo(true, true, true, true));
-         addComponent(new TextField("Shandaar"));
-         addComponent(new TextField("Zabardast"));
-         addComponent(new TextField("Jindabaad"));
+        setMargin(new MarginInfo(true, true, false, true));
+        
          //panelToPut.setContent(v);
         //addComponent(panelToPut);
          //v.setWidth(String.valueOf(getWidth()*10)+"px");

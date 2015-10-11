@@ -23,15 +23,16 @@ import org.vaadin.sliderpanel.client.SliderTabPosition;
  */
 @Theme("mytheme")
 @Widgetset("com.logicbomb.newschool.MyAppWidgetset")
-public class ContextWidget extends AbsoluteLayout {
+public class ContextWidgetTop extends AbsoluteLayout {
 
-    public static ContextWidget ContextWidgetTransformer(ContextWidget aAbsoluteLayout,SliderMasterPage aSliderPanelContents,SliderMode position, String sliderStyle) {
+    public static ContextWidgetTop ContextWidgetTransformer(ContextWidgetTop aAbsoluteLayout,SliderMasterPage aSliderPanelContents,SliderMode position, String sliderStyle) {
         aAbsoluteLayout.addStyleName("backColorWhite");
         //aAbsoluteLayout.setSizeFull();
         SliderPanel p = getSliderWidget(aSliderPanelContents,position,sliderStyle);
         AbsoluteLayout.ComponentPosition iComponentPositionPanel = aAbsoluteLayout.new ComponentPosition();
-        iComponentPositionPanel.setLeft((float) 97, Unit.PERCENTAGE);
-        iComponentPositionPanel.setTop((float) 0, Unit.PERCENTAGE);
+        iComponentPositionPanel.setRight((float) 4, Unit.PIXELS);
+        //iComponentPositionPanel.setWidth("200px");
+        iComponentPositionPanel.setTop((float) 0, Unit.PIXELS);
         aAbsoluteLayout.addComponent(p);
         aAbsoluteLayout.setPosition(p, iComponentPositionPanel);
         return aAbsoluteLayout;
@@ -41,12 +42,13 @@ public class ContextWidget extends AbsoluteLayout {
     private static SliderPanel getSliderWidget(VerticalLayout contentsOfSlider,SliderMode position , String sliderStyle) {
 
         SliderPanel sliderPanel = new SliderPanelBuilder(contentsOfSlider)
-                .caption("Quick View")
+                .caption("  Rajat Srivastava, Student")
                 .mode(position)
                 .tabPosition(SliderTabPosition.MIDDLE)
                 .style(sliderStyle)
                 .build();
         //sliderPanel.setHeightUndefined();
+        sliderPanel.setWidth((float) 260, Unit.PIXELS);
         sliderPanel.setAnimationDuration(200);
         return sliderPanel;
     }

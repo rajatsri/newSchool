@@ -5,7 +5,10 @@
  */
 package com.logicbomb.newschool.pages;
 
+import com.logicbomb.newschool.MyAppWidgetSet.core.UserDetailsWidget;
+import com.google.gwt.user.client.ui.ToggleButton;
 import com.logicbomb.newschool.MyAppWidgetSet.core.ContextWidget;
+import com.logicbomb.newschool.MyAppWidgetSet.core.ContextWidgetTop;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.FontAwesome;
@@ -30,12 +33,17 @@ import org.vaadin.sliderpanel.client.SliderMode;
 public class PrimaryMasterPage extends HorizontalLayout {
 
     public PrimaryMasterPage() {
+        
+        //ContextWidget c= new ContextWidget();
+       
+        
         HorizontalLayout iHorizontalLayout = new HorizontalLayout();
+        //addComponent(iHorizontalLayout,"top:0px;left:0px");
         iHorizontalLayout.setWidth(String.valueOf(Page.getCurrent().getBrowserWindowWidth()));
         iHorizontalLayout.setHeight(String.valueOf(Page.getCurrent().getBrowserWindowHeight()));
         iHorizontalLayout.setStyleName("backColorBlack");
 
-        String[] captions1 = {"Logo Here", "My Cool School", "Third"};
+        //String[] captions1 = {"Logo Here", "My Cool School", "Third"};
 
         //Layout A and its sub components
         Panel AP = new Panel();
@@ -52,8 +60,9 @@ public class PrimaryMasterPage extends HorizontalLayout {
 
         Button logoImage = new Button();
         logoImage.setIcon(FontAwesome.PICTURE_O);
-        logoImage.setHeight("100px");
-        logoImage.setWidth("100px");
+        logoImage.setSizeFull();
+        logoImage.setHeight(logoImage.getWidth()+10,Unit.PIXELS);
+        //logoImage.setWidth("100px");
         A.addComponent(logoImage);
         A.setComponentAlignment(logoImage,Alignment.TOP_CENTER);
         
@@ -68,37 +77,39 @@ public class PrimaryMasterPage extends HorizontalLayout {
         //A.setComponentAlignment(schoolName,Alignment.TOP_CENTER);
 
         //Layout B
+        ContextWidgetTop c= new ContextWidgetTop();
+        c=ContextWidgetTop.ContextWidgetTransformer(c, new UserDetailsWidget(),SliderMode.TOP,SliderPanelStyles.COLOR_RED);
         VerticalLayout B = new VerticalLayout();
         B.setSizeFull();
-        iHorizontalLayout.addComponent(B);
-        iHorizontalLayout.setExpandRatio(B, 6);
+        iHorizontalLayout.addComponent(c);
+        c.addComponent(B);
+        iHorizontalLayout.setExpandRatio(c, 9);
 
         //Layout B1 and its sub Components
-        ContextWidget B1= new ContextWidget();
+        HorizontalLayout B1= new HorizontalLayout();
         B.addComponent(B1);
-        B.setExpandRatio(B1, 1);
+        //B.setExpandRatio(B1, 1);
+        //B1.setHeight("70px");
         B1.setSizeFull();
         //B1=ContextWidget.ContextWidgetTransformer(B1, new SliderMasterPage(),SliderMode.RIGHT,SliderPanelStyles.COLOR_RED);
                 
         HorizontalLayout B11 = new HorizontalLayout();
         B1.addComponent(B11);
+        B1.setStyleName("backColorBlack");
         B11.setSizeFull();
-        B11.setStyleName("backColorBlack");
+        B1.setHeight("45px");
+        //B1.setStyleName("backColorWhite");
         //B1.setMargin(new MarginInfo(false, true, false, true));
 
         TextField iTextField = new TextField();
         iTextField.setWidth("200px");
         iTextField.setInputPrompt("Search!");
+        iTextField.setStyleName("v-text-type-search");
         iTextField.focus();
         B11.addComponent(iTextField);
         B11.setComponentAlignment(iTextField, Alignment.MIDDLE_LEFT);
         
-        Button userPhoto = new Button();
-        userPhoto.setIcon(FontAwesome.USER);
-        userPhoto.setHeight("55px");
-        userPhoto.setWidth("55px");
-        B11.addComponent(userPhoto);
-        B11.setComponentAlignment(userPhoto, Alignment.MIDDLE_RIGHT);
+        
         
 
 
@@ -106,13 +117,13 @@ public class PrimaryMasterPage extends HorizontalLayout {
         ContextWidget B2 = new ContextWidget();
         B2.setSizeFull();
         B.addComponent(B2);
-        B.setExpandRatio(B2, 8);
+        B.setExpandRatio(B2, 10);
         B2=ContextWidget.ContextWidgetTransformer(B2, new SliderMasterPage(),SliderMode.RIGHT,SliderPanelStyles.COLOR_BLUE);
         //B2=ContextWidget.ContextWidgetTransformer(B2, new SliderMasterPage(),SliderMode.TOP,SliderPanelStyles.COLOR_RED);
         VerticalLayout v= new VerticalLayout();
         B2.addComponent(v);
         
-        Button b1111= new Button("Put all the inner components like this");
+        Button b1111= new Button("Put all the inner components like this Put all the inner components like this Put all the inner components like this Put all the inner components like this");
         v.addComponent(b1111);
         Button b1112= new Button("Put all the inner components like this");
         v.addComponent(b1112);
